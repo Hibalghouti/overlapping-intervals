@@ -1,6 +1,6 @@
 def merge_intervals(intervals):
    
-    merged = []
+    merged = [] 
     
     for interval in intervals:
         #This checks if the end of the last interval in the merged list
@@ -10,7 +10,7 @@ def merge_intervals(intervals):
             merged.append(interval)
         else:
             # There is an overlap so merge the intervals
-            merged[-1][1] = max(merged[-1][1], interval[1])
+            merged[0][1] = max(merged[0][1], interval[1])
 
     return merged
 
